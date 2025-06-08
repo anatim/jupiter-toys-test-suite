@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 import { HomePage } from './pageObjects/HomePage';
 import { ShopPage } from './pageObjects/ShopPage';
 import { CartPage } from './pageObjects/CartPage';
