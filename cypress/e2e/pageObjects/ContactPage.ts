@@ -22,10 +22,9 @@ export class ContactPage {
     cy.get('a.btn[ng-click="goBack()"]')
       .should('be.visible')
       .click();
-    
     // Ensure form is ready for interaction
     cy.get(this.formSelector).should('exist');
-    cy.wait(500); // Wait for the contact form to be displayed
+    cy.wait(500);
   }
 
   goToContactForm() {  
@@ -35,10 +34,9 @@ export class ContactPage {
         this.clickBackButton();
       }
     });
-
     // Ensure form is ready for interaction
     cy.get(this.formSelector).should('exist');
-    cy.wait(500); // Wait for the contact form to be displayed
+    cy.wait(500);
   }
 
   fillMandatoryFields({forename, email, message}: {forename: string, email: string, message: string}) {    
