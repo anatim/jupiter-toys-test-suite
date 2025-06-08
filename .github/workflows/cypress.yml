@@ -1,0 +1,53 @@
+﻿name: Cypress Tests
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        containers: [1, 2]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Cypress tests
+        uses: cypress-io/github-action@v6
+        with:
+          browser: chrome
+          parallel: true
+          group: 'UI Tests'
+          command: npm run test:parallel
+          config-file: cypress.config.ts
+          ci-build-id: ${{ github.run_number }}
+
+      # - name: Upload screenshots
+      #   uses: actions/upload-artifact@v4
+      #   if: failure()
+      #   with:
+      #     name: cypress-screenshots-${{ matrix.containers }}
+      #     path: cypress/screenshots
+      #     if-no-files-found: ignore
+
+      # - name: Upload videos
+      #   uses: actions/upload-artifact@v4
+      #   if: always()
+      #   with:
+      #     name: cypress-videos-${{ matrix.containers }}
+      #     path: cypress/videos
+      #     if-no-files-found: ignore

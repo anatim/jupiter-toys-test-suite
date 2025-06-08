@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "lib": ["es6", "dom"],
+    "types": ["cypress", "node", "mocha", "chai"],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "outDir": "./dist",
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "cypress/**/*.ts",
+    "cypress/**/*.d.ts",
+    "node_modules/cypress/types/index.d.ts",
+    // "node_modules/cypress/types/blob-util.d.ts",
+    // "node_modules/cypress/types/minimatch.d.ts",
+    // "node_modules/cypress/types/bluebird.d.ts"
+  ]
+}

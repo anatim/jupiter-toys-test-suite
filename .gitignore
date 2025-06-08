@@ -1,0 +1,31 @@
+# Cypress stuff
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+
+# Node modules
+node_modules/
+npm-debug.log*
+
+# VSCode
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Env/config
+.env
+.env.*
+
+# Coverage
+coverage/
+nyc_output/
+
+# Output
+dist/
+build/
+out/
+
+# GitHub Actions artifacts (if downloaded locally)
+*.tgz

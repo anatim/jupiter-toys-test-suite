@@ -1,0 +1,33 @@
+{
+  "name": "jupiter-toys-test-suite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run --browser chrome",
+    "test:parallel": "cypress run --browser chrome --parallel",
+    "test:ui": "cypress open --browser chrome",
+    "test:ci": "cypress run --browser chrome --headless"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anatim/jupiter-toys-test-suite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/anatim/jupiter-toys-test-suite/issues"
+  },
+  "homepage": "https://github.com/anatim/jupiter-toys-test-suite#readme",
+  "devDependencies": {
+    "@types/chai": "^5.2.2",
+    "@types/cypress": "^0.1.6",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.15.30",
+    "cypress": "^14.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
