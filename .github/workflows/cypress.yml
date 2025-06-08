@@ -30,24 +30,5 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
-          parallel: true
-          group: 'UI Tests'
-          command: npm run test:parallel
+          command: npm run test:ci
           config-file: cypress.config.ts
-          ci-build-id: ${{ github.run_number }}
-
-      # - name: Upload screenshots
-      #   uses: actions/upload-artifact@v4
-      #   if: failure()
-      #   with:
-      #     name: cypress-screenshots-${{ matrix.containers }}
-      #     path: cypress/screenshots
-      #     if-no-files-found: ignore
-
-      # - name: Upload videos
-      #   uses: actions/upload-artifact@v4
-      #   if: always()
-      #   with:
-      #     name: cypress-videos-${{ matrix.containers }}
-      #     path: cypress/videos
-      #     if-no-files-found: ignore
