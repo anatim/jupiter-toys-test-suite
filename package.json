@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress run --browser chrome",
-    "test:parallel": "cypress run --browser chrome --parallel",
     "test:ui": "cypress open --browser chrome",
     "test:ci": "cypress run --browser chrome --headless"
   },

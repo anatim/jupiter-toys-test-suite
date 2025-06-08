@@ -39,11 +39,9 @@ npm test
 npm run test:ui
 
 ## CI/CD
-The test suite is configured to run in GitHub Actions:
-
+The test suite is configured to run `headless` in GitHub Actions:
 - Runs on push to main
 - Runs on pull requests
-- Parallel execution in 2 containers
 - Artifacts intentionally not stored for videos and failure screenshots - this is to be implemented in Cypress Cloud
 
 ## Project Structure
