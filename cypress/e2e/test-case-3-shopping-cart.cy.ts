@@ -33,12 +33,6 @@ describe('Shop Page and Cart Calculations', () => {
     home.goToCartPage();
     
     let expectedTotal = 0;
-    
-    // // Verify each product's price and subtotal
-    // products.forEach(product => {
-    //   cart.verifyProductDetails(product.name, product.price, qty);
-    //   expectedTotal = product.price * qty;
-    // });
 
     // Verify each product's price and subtotal
     Object.entries(orderQuantities).forEach(([key, qty]) => {
