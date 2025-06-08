@@ -6,7 +6,7 @@
   "scripts": {
     "test": "cypress run --browser chrome",
     "test:ui": "cypress open --browser chrome",
-    "test:ci": "cypress run --browser chrome --headless"
+    "test:headless": "cypress run --browser chrome --headless"
   },
   "repository": {
     "type": "git",

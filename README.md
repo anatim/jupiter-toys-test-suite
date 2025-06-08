@@ -38,6 +38,9 @@ npm test
 # Run tests via Cypress UI
 npm run test:ui
 
+# Run tests headless
+npm run test:headless
+
 ## CI/CD
 The test suite is configured to run `headless` in GitHub Actions:
 - Runs on push to main
