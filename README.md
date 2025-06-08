@@ -40,11 +40,12 @@ npm run test:ui
 
 # Run tests headless
 npm run test:headless
-
+```
 ## CI/CD
 The test suite is configured to run `headless` in GitHub Actions:
 - Runs on push to main
 - Runs on pull requests
+- Runs when triggered manually via GitHub Actions - [Cypress Tests workflow](https://github.com/anatim/jupiter-toys-test-suite/actions/workflows/cypress.yml)
 - Artifacts intentionally not stored for videos and failure screenshots - this is to be implemented in Cypress Cloud
 
 ## Project Structure
@@ -52,4 +53,3 @@ The test suite is configured to run `headless` in GitHub Actions:
 - `cypress/e2e/test-case-{number}-*.cy.ts` - Test files
 - `cypress/e2e/pageObjects/` - Page Object Model classes
 - `cypress/support/` - Support files and custom commands
-```
