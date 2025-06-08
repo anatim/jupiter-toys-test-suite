@@ -33,7 +33,7 @@ npm ci
 
 ```bash
 # Run all tests in Chrome browser
-npm test
+npm run test
 
 # Run tests via Cypress UI
 npm run test:ui
